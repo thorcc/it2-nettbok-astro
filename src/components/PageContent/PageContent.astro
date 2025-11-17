@@ -1,6 +1,5 @@
 ---
 import type { MarkdownHeading } from 'astro'
-import MoreMenu from '../RightSidebar/MoreMenu.astro'
 import TableOfContents from '../RightSidebar/TableOfContents'
 
 type Props = {
@@ -14,15 +13,12 @@ const { title, headings, editUrl } = Astro.props
 
 <article id="article" class="content">
   <section class="main-section">
-    <h1 class="content-title" id="overview">{title}</h1>
+    <!--<h1 class="content-title" id="overview">{title}</h1> -->
     <nav class="block sm:hidden">
       <TableOfContents client:media="(max-width: 50em)" headings={headings} />
     </nav>
     <slot />
   </section>
-  <nav class="block sm:hidden">
-    <MoreMenu editHref={editUrl} />
-  </nav>
 </article>
 
 <style>

@@ -3,11 +3,9 @@ import type { MarkdownHeading } from 'astro'
 import type { CollectionEntry } from 'astro:content'
 import HeadCommon from '../components/HeadCommon.astro'
 import HeadSEO from '../components/HeadSEO.astro'
-import Header from '../components/Header/Header.astro'
 import PageContent from '../components/PageContent/PageContent.astro'
 import LeftSidebar from '../components/LeftSidebar/LeftSidebar.astro'
 import RightSidebar from '../components/RightSidebar/RightSidebar.astro'
-import Footer from '../components/Footer/Footer.astro'
 import { EDIT_URL, SITE } from '../consts'
 
 type Props = CollectionEntry<'docs'>['data'] & {
@@ -119,7 +117,7 @@ const editUrl = `${EDIT_URL}/${currentFile}`
   </head>
 
   <body>
-    <Header currentPage={currentPage} />
+    <!-- <Header currentPage={currentPage} /> -->
     <main class="layout">
       <aside id="grid-left" class="grid-sidebar" title="Site Navigation">
         <LeftSidebar currentPage={currentPage} />
@@ -133,6 +131,5 @@ const editUrl = `${EDIT_URL}/${currentFile}`
         <RightSidebar headings={headings} editUrl={editUrl} />
       </aside>
     </main>
-    <Footer path={currentFile} />
   </body>
 </html>

@@ -1,7 +1,7 @@
 export const SITE = {
-  title: 'Documentation',
-  description: 'Your website description.',
-  defaultLanguage: 'en-us'
+  title: 'IT2',
+  description: 'Nettbok for IT2.',
+  defaultLanguage: 'no'
 } as const
 
 export const OPEN_GRAPH = {
@@ -15,8 +15,7 @@ export const OPEN_GRAPH = {
 }
 
 export const KNOWN_LANGUAGES = {
-  Deutsch: 'de',
-  English: 'en'
+  Norwegian: 'no'
 } as const
 export const KNOWN_LANGUAGE_CODES = Object.values(KNOWN_LANGUAGES)
 
@@ -36,19 +35,11 @@ export type Sidebar = Record<
   Record<string, { text: string; link: string }[]>
 >
 export const SIDEBAR: Sidebar = {
-  de: {
-    Überschrift: [
-      { text: 'Einführung', link: 'de/introduction' },
-      { text: 'Seite 2', link: 'de/page-2' },
-      { text: 'Seite 3', link: 'de/page-3' }
-    ],
-    'Ein weiterer Abschnitt': [{ text: 'Seite 4', link: 'de/page-4' }]
-  },
-  en: {
-    'Section Header': [
-      { text: 'Introduction', link: 'en/introduction' },
-      { text: 'Page 2', link: 'en/page-2' },
-      { text: 'Page 3', link: 'en/page-3' }
+  no: {
+    'Notater': [
+      { text: 'Scraping med cookies', link: 'scraping-med-cookies'},
+      { text: 'Uke 1', link: 'uke1' },
+      { text: 'Uke 2', link: 'uke2' },
     ],
     'Another Section': [{ text: 'Page 4', link: 'en/page-4' }]
   }
