@@ -19,9 +19,9 @@ export const KNOWN_LANGUAGES = {
 } as const
 export const KNOWN_LANGUAGE_CODES = Object.values(KNOWN_LANGUAGES)
 
-export const EDIT_URL = `https://github.com/advanced-astro/astro-docs-template/tree/main`
+export const EDIT_URL = ``
 
-export const COMMUNITY_INVITE_URL = `https://astro.build/chat`
+export const COMMUNITY_INVITE_URL = ``
 
 // See "Algolia" section of the README for more information.
 export const ALGOLIA = {
@@ -36,11 +36,12 @@ export type Sidebar = Record<
 >
 export const SIDEBAR: Sidebar = {
   no: {
-    'Notater': [
+    'IT2': [
+      { text: 'Terminalen', link: 'terminalen' },
+      { text: 'Python', link: 'python' },
+      { text: 'API, JSON og Flask', link: 'api-josn-flask'},
       { text: 'Scraping med cookies', link: 'scraping-med-cookies'},
-      { text: 'Uke 1', link: 'uke1' },
-      { text: 'Uke 2', link: 'uke2' },
     ],
-    'Another Section': [{ text: 'Page 4', link: 'en/page-4' }]
+    // 'Another Section': [{ text: 'Page 4', link: 'en/page-4' }]
   }
 }
