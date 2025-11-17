@@ -1,0 +1,1 @@
+Notater til IT2 på VGS

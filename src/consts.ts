@@ -39,7 +39,7 @@ export const SIDEBAR: Sidebar = {
     'IT2': [
       { text: 'Terminalen', link: 'terminalen' },
       { text: 'Python', link: 'python' },
-      { text: 'API, JSON og Flask', link: 'api-josn-flask'},
+      { text: 'API, JSON og Flask', link: 'api-json-flask'},
       { text: 'Scraping med cookies', link: 'scraping-med-cookies'},
     ],
     // 'Another Section': [{ text: 'Page 4', link: 'en/page-4' }]
