@@ -4,15 +4,33 @@
 > Funksjoner _defineres_ med nøkkelordet `def` og _kjøres_ med enkle parenteser med argumenter inne i parentesene `(parameter1, parameter2, ..)
 `
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/KW6qncswzHw?si=GmLpHs6G5n3F4RFb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
 ## Oppgaver
 
 - <a href="https://cs50.harvard.edu/python/psets/0/" target="_blank">Harvard CS50: Problem Set 0</a> (oppgavene er under punkt 7 og hopp over "Before you begin")
 - <a href="https://trix.ifi.uio.no/course/8?tags=funksjon" target="_blank">Uio Trix: funksjoner</a>
 
 
-## Innebygde funksjoner
+## Filmer
+
+### Introduksjon til funksjoner
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lGS6O47debI?si=dTPzrPpWZeCm6qcI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### Returverdier
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AetGXMcNU3M?si=8Bniwp5yyF0AMwvy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### En visuell gjennomgang
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KW6qncswzHw?si=GmLpHs6G5n3F4RFb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### Hvor liten skal en funksjon være?
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rXjf8eiGsSI?si=-uFF_U20AdYz5drX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+## Notater
+
+### Innebygde funksjoner
 
 Python kommer med et sett med innebygde funksjoner, f.eks.:
 
@@ -34,11 +52,11 @@ list(set(lærere))
 str(int("0120"))
 ```
 
-## Funksjoner fra moduler
+### Funksjoner fra moduler
 
 I tillegg til innebygde funksjoner kan vi importere moduler med flere funksjoner. 
 
-### Eksempel random-modulen
+#### Eksempel random-modulen
 
 ```python
 # importerer random-modulen og kjører funksjonen randint fra
@@ -55,7 +73,7 @@ lærere = ["Hafnor", "Gade", "Manikarnika", "Thorsen", "Gade"]
 beste_lærer = choice(lærere)
 ```
 
-## Egne funksjoner
+### Egne funksjoner
 
 Vi kan også lage egne funksjoner med nøkkelordet `def`.
 
@@ -99,7 +117,7 @@ def hei_til_mange(*navn):
 hei_til_mange("Ravi", "Cecilie", "Fredrik", "Peder", "Vegar")
 ```
 
-## Returverdier
+### Returverdier
 
 Funksjoner kan også **returnere verdier** med nøkkelordet `return`
 
@@ -121,7 +139,7 @@ else:
     print("Sorry, kompis!")
 ```
 
-## Ryddigere kode med funksjoner
+### Ryddigere kode med funksjoner
 
 Etter hvert som vi lager større og større programmer, blir det viktigere og viktigere å lage en strukturert kode som er enkel å jobbe med.
 Og funksjoner er et veldig godt hjelpemiddel for å strukturere kode.
@@ -181,7 +199,3 @@ def print_vær(navn, lat, lon):
 print_vær("Trondheim", "59.88", "10.52")
 print_vær("Sandvika", "63.43", "10.39")
 ```
-
-## Hvor liten skal en funksjon være?
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/rXjf8eiGsSI?si=-uFF_U20AdYz5drX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
