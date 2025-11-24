@@ -36,12 +36,18 @@ export type Sidebar = Record<
 >
 export const SIDEBAR: Sidebar = {
   no: {
-    'IT2': [
+    'Grunnleggende': [
+      { text: 'Funksjoner', link: 'funksjoner'}
+    ],
+    'Flask': [
+      { text: 'API, JSON og Flask', link: 'api-json-flask'},
+    ],
+    'Oppsett': [
       { text: 'Terminalen', link: 'terminalen' },
       { text: 'Python', link: 'python' },
-      { text: 'API, JSON og Flask', link: 'api-json-flask'},
-      { text: 'Scraping med cookies', link: 'scraping-med-cookies'},
     ],
-    // 'Another Section': [{ text: 'Page 4', link: 'en/page-4' }]
+    'Annet': [
+      { text: 'WEB-scraping med cookies', link: 'scraping-med-cookies'},
+    ]
   }
 }
