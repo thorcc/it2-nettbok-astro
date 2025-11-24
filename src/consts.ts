@@ -40,6 +40,8 @@ export const SIDEBAR: Sidebar = {
       { text: 'Funksjoner', link: 'funksjoner'}
     ],
     'Flask': [
+      { text: 'Hallo, verden!', link: 'flask'},
+      { text: 'Forms', link: 'forms'},
       { text: 'API, JSON og Flask', link: 'api-json-flask'},
     ],
     'Oppsett': [
