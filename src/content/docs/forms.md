@@ -226,7 +226,7 @@ def rute_hallo():
 <fieldset>
 <label for="pet-select">Choose a pet:</label>
 <select name="pets" id="pet-select">
-  <option value="">--Please choose an option--</option>
+  <option value="" selected>--Please choose an option--</option>
   <option value="dog">Dog</option>
   <option value="cat">Cat</option>
   <option value="hamster">Hamster</option>
@@ -240,7 +240,7 @@ def rute_hallo():
 <label for="pet-select">Choose a pet:</label>
 
 <select name="pets" id="pet-select">
-  <option value="">--Please choose an option--</option>
+  <option value="" selected>--Please choose an option--</option>
   <option value="dog">Dog</option>
   <option value="cat">Cat</option>
   <option value="hamster">Hamster</option>
@@ -260,4 +260,40 @@ def rute_hallo():
     return render_template("index.html")
 
 ...
+```
+
+### Nedtrekksboks med valg fra Python-liste
+
+<fieldset>
+<select name="favorittdyr">
+    <option value="" selected="">--Trykk her for å velge--</option>
+    <option value="dyr">Hund</option>
+    <option value="dyr">Katt</option>
+    <option value="dyr">Hamster</option>
+    <option value="dyr">Edderkopp</option>
+    <option value="dyr">Papegøye</option>
+</select>
+</fieldset>
+
+```html
+<select name="favorittdyr">
+    <option value="" selected>--Trykk her for å velge--</option>
+    {% for dyr in dyreliste %}
+        <option value="dyr">{{dyr}}</option>
+    {% endfor %}
+</select>
+```
+
+```python
+from flask import Flask, render_template, request
+
+app = Flask(__name__)
+
+dyreliste = ["Hund", "Katt", "Hamster", "Edderkopp", "Papegøye"]
+
+@app.get("/")
+def rute_index():
+    return render_template("index.html", dyreliste=dyreliste)
+
+app.run(debug=True)
 ```
