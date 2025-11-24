@@ -88,3 +88,176 @@ Her er noen vanlige input-elementer.
   <button style="background-color: lightgrey; border-radius:2px; margin-top: 4px;">Logg inn</button>
  </form> 
 </div>
+
+app.py
+
+```python
+...
+
+@app.post("/logg-inn")
+def rute_hallo():
+    brukernavn = request.values.get("brukernavn") 
+    passord = request.values.get("passord")
+    # gjør noe med brukernavn og passord..
+    return render_template("index.html")
+
+...
+```
+
+> post-metoden viser ikke det som sendes i url-en.
+
+## Radioknapper
+
+Radioknapper lar brukeren velge mellom flere valg, der bare ett valg kan velges om gangen.
+For at det skal fungere må alle radio-knappene ha samme `name`.
+
+<form>
+<fieldset>
+    <legend>Velg din favoritt:</legend>
+    <div>
+        <input type="radio" id="ronny" name="favoritt" value="ronny" checked>
+        <label for="ronny">Ronny</label>
+    </div>
+    <div>
+        <input type="radio" id="hermine" name="favoritt" value="hermine">
+        <label for="hermine">Hermine</label>
+    </div>
+    <div>
+        <input type="radio" id="harry" name="favoritt" value="harry">
+        <label for="harry">Harry</label>
+    </div>
+</fieldset>
+  <button style="background-color: lightgrey; border-radius:2px; margin-top: 4px;">Velg</button>
+</form>
+
+```html
+<form action="/valg">
+    <fieldset>
+      <legend>Velg din favoritt:</legend>
+    
+      <div>
+        <input type="radio" id="ronny" name="favoritt" value="ronny" checked>
+        <label for="ronny">Ronny</label>
+      </div>
+    
+      <div>
+        <input type="radio" id="hermine" name="favoritt" value="hermine">
+        <label for="hermine">Hermine</label>
+      </div>
+    
+      <div>
+        <input type="radio" id="harry" name="favoritt" value="harry">
+        <label for="harry">Harry</label>
+      </div>
+    </fieldset>
+    <button type="submit">Velg</button>
+</form>
+```
+
+
+```python
+...
+
+@app.post("/valg")
+def rute_hallo():
+    favoritt = request.values.get("favoritt") # favoritt er enten ronny, hermine eller harry
+    # gjør noe med favoritt..
+    return render_template("index.html")
+
+...
+```
+
+> `<fieldset>` og `<legend>` lager en ramme rundt radio-knappene.
+
+## Avkrysningsbokser
+
+Avkrysningsbokser lar brukeren krysse av flere bokser, i Python blir verdiene til `True` eller `False`.
+
+<form action="">
+    <fieldset>
+        <legend>Choose your monster's features:</legend>
+        <div>
+            <input type="checkbox" id="scales" name="scales" checked>
+            <label for="scales">Scales</label>
+        </div>
+        <div>
+            <input type="checkbox" id="horns" name="horns">
+            <label for="horns">Horns</label>
+        </div>
+    </fieldset>
+  <button style="background-color: lightgrey; border-radius:2px; margin-top: 4px;">Velg</button>
+</form>
+
+
+```html
+<form action="/valg">
+    <fieldset>
+        <legend>Choose your monster's features:</legend>
+
+        <div>
+            <input type="checkbox" id="scales" name="scales" checked>
+            <label for="scales">Scales</label>
+        </div>
+
+        <div>
+            <input type="checkbox" id="horns" name="horns">
+            <label for="horns">Horns</label>
+        </div>
+    </fieldset>
+    <button type="submit">Velg</button>
+</form>
+```
+
+```python
+...
+
+@app.post("/valg")
+def rute_hallo():
+    scales = request.values.get("scales") # True/False
+    horns = request.values.get("horns") # True/False
+    # gjør noe med scales og horns..
+    return render_template("index.html")
+
+...
+```
+
+## Nedtrekksboks
+
+<fieldset>
+<label for="pet-select">Choose a pet:</label>
+<select name="pets" id="pet-select">
+  <option value="">--Please choose an option--</option>
+  <option value="dog">Dog</option>
+  <option value="cat">Cat</option>
+  <option value="hamster">Hamster</option>
+  <option value="parrot">Parrot</option>
+  <option value="spider">Spider</option>
+  <option value="goldfish">Goldfish</option>
+</select>
+</fieldset>
+
+```html
+<label for="pet-select">Choose a pet:</label>
+
+<select name="pets" id="pet-select">
+  <option value="">--Please choose an option--</option>
+  <option value="dog">Dog</option>
+  <option value="cat">Cat</option>
+  <option value="hamster">Hamster</option>
+  <option value="parrot">Parrot</option>
+  <option value="spider">Spider</option>
+  <option value="goldfish">Goldfish</option>
+</select>
+```
+
+```python
+...
+
+@app.post("/valg")
+def rute_hallo():
+    pets = request.values.get("pets") # verdien til det som er valgt
+    # gjør noe med pets..
+    return render_template("index.html")
+
+...
+```
